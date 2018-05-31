@@ -1,0 +1,46 @@
+---
+menu:
+  - pageName: "HOME"
+    pageLink: ""
+  - pageName: "EMPRESA"
+    pageLink: ""
+  - pageName: "PRODUTOS"
+    pageLink: ""
+  - pageName: "SERVIÇOS"
+    pageLink: ""
+  - pageName: "CONTATO"
+    pageLink: ""
+
+    
+informations:
+    - type: "adress"
+      content: "Rua Tenente Milenko, 349 <br> Jardim Los Angeles - Peruíbe/SP <br> CEP 11750-000"
+    - type: "mail"
+      content: "contato@maguetaengenharia.com.br"
+    - type: "phone"
+      content: "(13) 3453-4821"
+    - type: "clock"
+      content: "Segunda à Sexta: <br> 09h00 às 11h30 <br> 13h00 às 17h00"
+---
+
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

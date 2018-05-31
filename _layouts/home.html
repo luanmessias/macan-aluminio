@@ -1,0 +1,151 @@
+---
+layout: default
+
+banners:
+    - number: 1
+      title: "Atividades em locais de alto risco e complexidade"
+      description: "Atividades em locais de alto risco e complexidade"
+
+cards:
+    - number: "01"
+      title: "Padrão de Entrada"
+      desc: "Medições individual e agrupada, elaboração/apresentação/execução de projetos elétricos junto a conseccionária com fornecimento de material e mão de obra."
+    - number: "02"
+      title: "Projetos Elétricos"
+      desc: "Elaboração de Projetos de Redes e Linhas de Distribuição em média e baixa tensão, Iluminação Pública e Ornamental (pontes, viadutos, praças, passarelas, ciclovias... ). Projetos Especiais de SPDA e AVCB."
+    - number: "03"
+      title: "Centro de Transformação"
+      desc: "Viabilidade técnica, Laudos, Projeto Elétrico, Acompanhamento junto as concessionárias, fornecimento de materiais homologados conforme normas específicas e ABNT e execução. Cabines Primárias, Transformadores a Seco, Manutenção Geral e Emergencial."
+    - number: "04"
+      title: "Condomínios, Loteamentos, Pessoa física/jurídica"
+      desc: "Elaboração, apresentação e execução de projetos de extensão, construção de redes de baixa e média tensão com instalação de transformadores e sistemas de iluminação em redes de cobre/alumínio de tipo convencional ou multiplexadas e compactas."
+
+
+destaques:
+    - figure: "gear"
+      title: "DESTAQUE"
+      desc: "BREVE DESCRIÇÃO"
+    - figure: "stats"
+      title: "DESTAQUE"
+      desc: "BREVE DESCRIÇÃO"
+    - figure: "note"
+      title: "DESTAQUE"
+      desc: "BREVE DESCRIÇÃO"
+
+
+produtos:
+    - number: 1
+      title: "Padrão de Entrada"
+      desc: "Medições individual e agrupada, elaboração/apresentação/execução de projetos elétricos junto a conseccionária com fornecimento de material e mão de obra."
+    - number: 2
+      title: "Projetos Elétricos"
+      desc: "Elaboração de Projetos de Redes e Linhas de Distribuição em média e baixa tensão, Iluminação Pública e Ornamental (pontes, viadutos, praças, passarelas, ciclovias... ). Projetos Especiais de SPDA e AVCB."
+    - number: 3
+      title: "Centro de Transformação"
+      desc: "Viabilidade técnica, Laudos, Projeto Elétrico, Acompanhamento junto as concessionárias, fornecimento de materiais homologados conforme normas específicas e ABNT e execução. Cabines Primárias, Transformadores a Seco, Manutenção Geral e Emergencial."
+---
+
+
+<div class="container-fluid banner-home nopadding">
+    <div class="banner-home-back"></div>
+    <div class="container-fluid nopadding">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                {% for banner in layout.banners %}
+                    <div class="carousel-item {% if banner.number == 1 %} active {% endif %}">
+                        <img class="d-block img-fluid" src="{{ "/assets/img/banner-home-number.jpg" | replace: "number", banner.number | relative_url }}" alt="First slide">
+                        <div class="carousel-caption d-none">
+                            <h3>{{banner.title}}</h3>
+                            <p>{{banner.description}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <!--
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            -->
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="servicos container">
+    <h1>Nossos Servicos</h1>
+    <span>Understanding steel processing Students of steel processing may be interested in our brief descriptions of each of our
+        main steel processing machines, which you can find by clicking below.</span>
+    <div class="card-group d-xl-flex justify-content-between align-items-center">
+        {% for card in layout.cards %}
+        <div class="card">
+            <div class="number">{{card.number}}</div>
+            <div class="card-body">
+                <h5 class="card-title card-number">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                    is a little bit longer.</p>
+                <p class="card-text">
+                    <a name="" id="" class="btn btn-primary btn-alt-primary" href="#" role="button">MAIS</a>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="destaques">
+    <div class="container card-group d-xl-flex justify-content-between align-items-center">
+        {% for destaque in layout.destaques %}
+        <div class="card">
+            <img src="{{ "/assets/img/change.png" | replace: "change", destaque.figure | relative_url }}" alt="First slide">
+            <div class="card-body">
+                <h5 class="card-title card-number">{{destaque.title}}</h5>
+                <p class="card-text">{{destaque.desc}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="produtos container">
+    <h1>Nossos Produtos</h1>
+    <div class="card-group d-xl-flex justify-content-between">
+        {% for produto in layout.produtos %}
+        <div class="card col-xl-4">
+            <img src="{{ "/assets/img/prodhome-number.jpg" | replace: "number", produto.number | relative_url }}" alt="First slide">
+            <div class="card-body">
+                <h5 class="card-title">{{ produto.title }}</h5>
+                <p class="card-text">{{ produto.desc }}</p>
+                <p class="card-text">
+                    <a name="" id="" class="btn btn-primary btn-alt-primary" href="#" role="button">MAIS</a>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="social">
+    <div class="container socialinfo col-xl-4">
+        <h2>NOS ACOMPANHE!</h2>
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud.
+        </span>
+    </div>
+    <div class="container social-icons d-xl-flex justify-content-center align-items-flex-start">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-skype"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-google"></i></a>
+    </div>
+</div>
+
+

@@ -1,0 +1,83 @@
+// LOCALIZACAO
+// ====================================================================
+%loc-map {
+    #map {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+%loc-title {
+    text-align: center;
+    h1 {
+        @include fonte($font-two, normal, 40px, $color-black);
+        display: inline-block;
+        width: auto;
+        margin: 25px auto;
+        &:after {
+            content: "";
+            width: 195px;
+            height: 2px;
+            background: $color-black;
+            display: block;
+            margin: 5px auto;
+        }
+    }
+}
+
+%loc-info {
+    .information {
+        background: $color-blue-darkest;
+        padding: 10px 0px;
+        .info {
+            @include fonte($font-one, normal, 14px, $color-white);
+            text-align: left;
+            span{
+                display: block;
+            }
+            @media (max-width: $res-sm) {
+                text-align: center;
+            }
+            &:before{
+                display: inline-block;
+                margin-right: 10px;
+                @media (max-width: $res-sm) {
+                    width: 100%;
+                    display: block;
+                    margin: 10px 0px;
+                    text-align: center;
+                }
+            }
+            &.info-adress {
+                &:before {
+                    @include set-icon($fa-var-map-marker, 50px, 300, $color-white);
+                }
+            }
+            &.info-mail {
+                font-size: 16px;
+                &:before {
+                    @include set-icon($fa-var-envelope, 50px, 300, $color-white);
+                }
+            }
+            &.info-phone {
+                font-size: 18px;
+                &:before {
+                    @include set-icon($fa-var-phone, 50px, 300, $color-white);
+                }
+            }
+            &.info-clock {
+                &:before {
+                    @include set-icon($fa-var-clock-o, 50px, 300, $color-white);
+                }
+            }
+        }
+    }
+}
+
+// LOCALIZACAO - CALLS
+// ====================================================================
+body #localizacao {
+    @extend %loc-title;
+    @extend %loc-map;
+    @extend %loc-info;
+}

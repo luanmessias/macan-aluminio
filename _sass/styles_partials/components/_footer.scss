@@ -1,0 +1,62 @@
+// FOOTER
+// ====================================================================
+%footer-cont {
+    @include box-sizing();
+    background: $color-black;
+    .container {
+        @include box-sizing();
+        text-align: center;
+    }
+    @media (max-width: $res-sm) {
+        &.footer {
+            min-height: 60px;
+            height: auto;
+            text-align: center;
+            line-height: 12px;
+            padding: 10px;
+        }
+    }
+}
+
+%footer-partners {
+    text-align: center;
+    padding: 10px 0px; 
+    h1 {
+        @include fonte($font-two, normal, 40px, $color-black);
+        display: inline-block;
+        width: auto;
+        margin: 15px auto;
+        &:after {
+            content: "";
+            width: 195px;
+            height: 2px;
+            background: $color-black;
+            display: block;
+            margin: 5px auto;
+        }
+    }
+}
+
+%footer-texts {
+    span {
+        @include fonte($font-one, normal, 12px, $color-white);
+        display: block;
+        margin: 0px auto;
+        float: none;
+        margin: 15px 0px;
+        &.develop {
+            @include fonte($font-one, normal, 10px, $color-white);
+        }
+    }
+}
+
+// HOME - CALLS
+// ====================================================================
+.partner {
+   @extend %footer-partners; 
+}
+
+footer {
+    @extend %footer-cont;
+    @extend %footer-texts;
+}

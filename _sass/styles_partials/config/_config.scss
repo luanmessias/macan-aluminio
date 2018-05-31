@@ -1,0 +1,50 @@
+/* URL - BASE */
+$img-url: "../assets/img";
+$font-url: "../assets/fonts";
+
+.nopadding {
+	padding: 0 !important;
+	margin: 0 !important;
+ }
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+$res-xs: 576px;
+$res-sm: 768px;
+$res-md: 992px;
+$res-xl: 1200px;
+
+@media (max-width: $res-xs) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: $res-sm) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $res-md) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $res-xl) {  }
+
+
+/* 
+Bandeiras de pagamento no rodapé da página
+• As configurações CSS deste modulo esta presente no arquivo _footer.scss.
+• A ordem escrita na string será a ordem exibida.
+
+	Opções possíveis:
+	aura, bb, banrisul, boleto, bradesco, dinners, elo,
+	hipercard, hsbc, itau, mastercard, paypal, visa, amex,
+*/
+
+$payments:(visa, mastercard, amex, dinners, elo, boleto);
+
+/*
+ Esta variavel define o local de onde o sass irá executar o Font-Awesome.
+ Altere esta variavel para true apenas se o deploy de sua loja for feito no ambinete de homologação.
+ No caso das agências em que o deploy é feito neste ambiente é importante lembrar de alterar essa váriavel
+ para false quando o desenvolvimento terminar e for transferido para produção.
+ O motivo se da pelo bloqueio de requisições HTTP quando a loja está em produção, ao mudar essa variavel para false a
+ loja irá buscar a fonte nos diretorios locais do projeto (mesmo local onde o CSS estará).
+*/
+$remote-deploy-font-awesome: true;
+

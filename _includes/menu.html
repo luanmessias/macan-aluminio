@@ -1,0 +1,30 @@
+<ul class="nav nav-desktop align-items-end d-none d-md-flex align-self-end">
+    {% for link in layout.menu %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{link.pageLink}}">{{link.pageName}}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<div class="spinner-master2 d-md-none">
+    <input type="checkbox" id="spinner-form2" />
+    <label for="spinner-form2" class="spinner-spin2">
+        <div class="spinner2 diagonal part-1"></div>
+        <div class="spinner2 horizontal"></div>
+        <div class="spinner2 diagonal part-2"></div>
+    </label>
+</div>
+
+
+<ul class="nav nav-mobile d-md-none d-flex align-content-start flex-wrap">
+    <li class="nav-item">
+        <a id="logo-menu" href="{{ site.baseurl }}/" class="">
+            <img class="img-fluid" src="{{ "/assets/img/logo.png" | relative_url }}" alt="">
+        </a>
+    </li>
+    {% for link in layout.menu %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{link.pageLink}}">{{link.pageName}}</a>
+    </li>
+    {% endfor %}
+</ul>

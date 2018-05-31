@@ -1,0 +1,444 @@
+{
+    "tools": {
+        "cantoneiras_abas_iguais": [
+            {
+                "cod": "MAC-002",
+                "desc": "CANTONEIRA 12,70 X 1,00MM",
+                "peso_metro": "0,065",
+                "medida_a": "1/2\"",
+                "medida_b": "1/2\"",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0003",
+                "desc": "CANTONEIRA 19,05 X 1,00MM",
+                "peso_metro": "0,100",
+                "medida_a": "3/4\"",
+                "medida_b": "3/4\"",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0004",
+                "desc": "CANTONEIRA 25,40 X 1,00MM",
+                "peso_metro": "0,134",
+                "medida_a": "1\"",
+                "medida_b": "1\"",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0006",
+                "desc": "CANTONEIRA 38,10 X 1,58MM",
+                "peso_metro": "0,321",
+                "medida_a": "1 1/2\"",
+                "medida_b": "1 1/2\"",
+                "medida_e": "1/16\""
+            },
+            {
+                "cod": "MAC-0005",
+                "desc": "CANTONEIRA 50,80 X 3,00MM",
+                "peso_metro": "0,801",
+                "medida_a": "2\"",
+                "medida_b": "2\"",
+                "medida_e": "1/8\""
+            }
+        ],
+        "barra_chata": [
+            {
+                "cod": "MAC-0029",
+                "desc": "BARRA CHATA 9,52 X 3,17MM",
+                "peso_metro": "0,082",
+                "medida_a": "3/8\"",
+                "medida_b": "---",
+                "medida_e": "1/8\""
+            },
+            {
+                "cod": "MAC-0117",
+                "desc": "BARRA CHATA 19,05 X 4,76MM",
+                "peso_metro": "0,245",
+                "medida_a": "3/4\"",
+                "medida_b": "---",
+                "medida_e": "3/16\""
+            },
+            {
+                "cod": "MAC-0120",
+                "desc": "BARRA CHATA 25,40 X 9,52MM",
+                "peso_metro": "0,655",
+                "medida_a": "1\"",
+                "medida_b": "---",
+                "medida_e": "3/8\""
+            },
+            {
+                "cod": "MAC-0115",
+                "desc": "BARRA CHATA 38,1 X 6,35MM",
+                "peso_metro": "0,655",
+                "medida_a": "---",
+                "medida_b": "1.1/2\"",
+                "medida_e": "1/4\""
+            },
+            {
+                "cod": "MAC-0122",
+                "desc": "BARRA CHATA 38,10 X 3,17MM",
+                "peso_metro": "0,317",
+                "medida_a": "1.1/2\"",
+                "medida_b": "---",
+                "medida_e": "1/8\""
+            },
+            {
+                "cod": "MAC-0118",
+                "desc": "BARRA CHATA 38,1 X 4,76MM",
+                "peso_metro": " 0,491",
+                "medida_a": "1.1/2\"",
+                "medida_b": "---",
+                "medida_e": "3/16\""
+            },
+            {
+                "cod": "MAC-0159",
+                "desc": "BARRA CHATA 38,10 X 9,52MM",
+                "peso_metro": " 0,984",
+                "medida_a": " 1.1/2\"",
+                "medida_b": "---",
+                "medida_e": "3/8\""
+            },
+            {
+                "cod": "MAC-0119",
+                "desc": "BARRA CHATA 50,80 X 4,76MM",
+                "peso_metro": " 0,655",
+                "medida_a": "2\"",
+                "medida_b": "---",
+                "medida_e": "3/16\""
+            },
+            {
+                "cod": "MAC-0116",
+                "desc": "BARRA CHATA 50,80 X 6,35MM",
+                "peso_metro": "0,874",
+                "medida_a": "2\"",
+                "medida_b": "---",
+                "medida_e": "1/4\""
+            },
+            {
+                "cod": "MAC-0184",
+                "desc": "BARRA CHATA 50,80 X 12,70MM",
+                "peso_metro": "1,748",
+                "medida_a": "2\"",
+                "medida_b": "---",
+                "medida_e": "1/2\""
+            },
+            {
+                "cod": "MAC-0056",
+                "desc": "BARRA CHATA 76,10 X 6,35MM",
+                "peso_metro": "1,311",
+                "medida_a": "3\"",
+                "medida_b": "---",
+                "medida_e": "1/4\""
+            },
+            {
+                "cod": "MAC-0185",
+                "desc": "BARRA CHATA 76,10 X 12,70MM",
+                "peso_metro": "2,623",
+                "medida_a": "3\"",
+                "medida_b": "---",
+                "medida_e": "1/2\""
+            },
+            {
+                "cod": "MAC-0114",
+                "desc": "BARRA CHATA 101,6 X 9,52MM",
+                "peso_metro": "2,621",
+                "medida_a": "4\"",
+                "medida_b": "---",
+                "medida_e": "3/8\""
+            },
+            {
+                "cod": "MAC-0121",
+                "desc": "BARRA CHATA 101,60 X 12,70MM",
+                "peso_metro": "3,496",
+                "medida_a": "4\"",
+                "medida_b": "---",
+                "medida_e": "1/2\""
+            }
+        ],
+        "perfil_u_abas_iguais": [
+            {
+                "cod": "MAC-0050",
+                "desc": "PERFIL \"U\" 9,52 X 1,58",
+                "peso_metro": "0,108",
+                "medida_a": "3/8\"",
+                "medida_b": "3/8\"",
+                "medida_e": "1/16\""
+            },
+            {
+                "cod": "MAC-0015",
+                "desc": "PERFIL \"U\" 12,70 X 1,40MM",
+                "peso_metro": "0,133",
+                "medida_a": "1/2\"",
+                "medida_b": "1/2\"",
+                "medida_e": "1,40"
+            },
+            {
+                "cod": "MAC-0014",
+                "desc": "PERFIL \"U\" 15,87 X 1,30MM",
+                "peso_metro": "0,158",
+                "medida_a": "5/8\"",
+                "medida_b": "5/8\"",
+                "medida_e": "1,30"
+            }
+        ],
+        "perfil_u_abas_desiguais": [
+            {
+                "cod": "MAC-0050",
+                "desc": "PERFIL \"U\" 15,87 X 25,40",
+                "peso_metro": "0,208",
+                "medida_a": "5/8\"",
+                "medida_b": "1\"",
+                "medida_e": "1,00"
+            },
+            {
+                "cod": "MAC-0041",
+                "desc": "PERFIL \"U\" 35 X 29 X 1,2",
+                "peso_metro": "0,315",
+                "medida_a": "35,00",
+                "medida_b": "29,00",
+                "medida_e": "1,20"
+            }
+        ],
+        "perfil_t": [
+            {
+                "cod": "MAC-0051",
+                "desc": "PERFIL \"T\" 25,40 X 1,00MM",
+                "peso_metro": "0,135",
+                "medida_a": "1\"",
+                "medida_b": "1\"",
+                "medida_e": "1,00"
+            }
+        ],
+        "tubo_redondo": [
+            {
+                "cod": "MAC-0187",
+                "desc": "TUBO REDONDO 7,93 X 1,00MM",
+                "peso_metro": "0,059",
+                "medida_a": "7/16\"",
+                "medida_b": "---",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0011",
+                "desc": "TUBO REDONDO 12,70 X 1,00MM",
+                "peso_metro": "0,099",
+                "medida_a": "1/2\"",
+                "medida_b": "---",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0192",
+                "desc": "TUBO REDONDO 15,00 X 1,00MM",
+                "peso_metro": "0,119",
+                "medida_a": "5/8\"",
+                "medida_b": "---",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0186",
+                "desc": "TUBO REDONDO 15,87 X 1,0MM",
+                "peso_metro": "0,126",
+                "medida_a": "5/8\"",
+                "medida_b": "---",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0063",
+                "desc": "TUBO REDONDO 15,87 X 1,2MM",
+                "peso_metro": "0,149",
+                "medida_a": "5/8\"",
+                "medida_b": "---",
+                "medida_e": "1,20MM"
+            },
+            {
+                "cod": "MAC-0008",
+                "desc": "TUBO REDONDO 15,87 X 1,2MM",
+                "peso_metro": "0,182",
+                "medida_a": "3/4\"",
+                "medida_b": "---",
+                "medida_e": "1,20MM"
+            },
+            {
+                "cod": "MAC-0026",
+                "desc": "TUBO REDONDO 19,05 X 1,58MM",
+                "peso_metro": "0,235",
+                "medida_a": "3/4\"",
+                "medida_b": "---",
+                "medida_e": "1/16\""
+            },
+            {
+                "cod": "MAC-0067",
+                "desc": "TUBO REDONDO 19,05 X 6,35MM",
+                "peso_metro": "0,686",
+                "medida_a": "3/4\"",
+                "medida_b": "---",
+                "medida_e": "1/4\""
+            },
+            {
+                "cod": "MAC-0033",
+                "desc": "TUBO REDONDO 22,22 X 1,00MM",
+                "peso_metro": "0,180",
+                "medida_a": "7/8\"",
+                "medida_b": "---",
+                "medida_e": "1,0MM"
+            },
+            {
+                "cod": "MAC-0062",
+                "desc": "TUBO REDONDO 22,22 X 1,58MM",
+                "peso_metro": "0,278",
+                "medida_a": "7/8\"",
+                "medida_b": "---",
+                "medida_e": "1/16\""
+            },
+            {
+                "cod": "MAC-0027",
+                "desc": "TUBO REDONDO 25,40 X 1,00MM",
+                "peso_metro": "0,207",
+                "medida_a": "1\"",
+                "medida_b": "---",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0057",
+                "desc": "TUBO REDONDO 25,40 X 1,58MM",
+                "peso_metro": "0,320",
+                "medida_a": "1\"",
+                "medida_b": "---",
+                "medida_e": "1/16\""
+            },
+            {
+                "cod": "MAC-0058",
+                "desc": "TUBO REDONDO 31,75 X 1,58MM",
+                "peso_metro": "0,405",
+                "medida_a": "1.1/4\"",
+                "medida_b": "---",
+                "medida_e": "1/16\""
+            },
+            {
+                "cod": "MAC-0061",
+                "desc": "TUBO REDONDO 31,75 X 3,17MM",
+                "peso_metro": "0,771",
+                "medida_a": "1.1/4\"",
+                "medida_b": "---",
+                "medida_e": "1/8\""
+            },
+            {
+                "cod": "MAC-0064",
+                "desc": "TUBO REDONDO 38,10 X 1,58MM",
+                "peso_metro": "0,492",
+                "medida_a": "1.1/2\"",
+                "medida_b": "---",
+                "medida_e": "1/16\""
+            },
+            {
+                "cod": "MAC-0012",
+                "desc": "TUBO REDONDO 38,10 X 3,17MM",
+                "peso_metro": "0,942",
+                "medida_a": "1.1/2\"",
+                "medida_b": "---",
+                "medida_e": "1/8\""
+            },
+            {
+                "cod": "MAC-0189",
+                "desc": "TUBO REDONDO 50,80 X 1,20MM",
+                "peso_metro": "0,506",
+                "medida_a": "1.1/2\"",
+                "medida_b": "---",
+                "medida_e": "1,20MM"
+            },
+            {
+                "cod": "MAC-0060",
+                "desc": "TUBO REDONDO 50,80 X 3,17MM",
+                "peso_metro": "1,284",
+                "medida_a": "2\"",
+                "medida_b": "---",
+                "medida_e": "1/8\""
+            },
+            {
+                "cod": "MAC-0059",
+                "desc": "TUBO REDONDO 76,20 X 3,17MM",
+                "peso_metro": "1,970",
+                "medida_a": "3\"",
+                "medida_b": "---",
+                "medida_e": "1/8\""
+            }
+        ],
+        "tubo_retangular": [
+            {
+                "cod": "MAC-0013",
+                "desc": "TUBO RET. 20,00 X 12,50 X 1,00MM",
+                "peso_metro": "0,165",
+                "medida_a": "---",
+                "medida_b": "---",
+                "medida_e": "---"
+            },
+            {
+                "cod": "MAC-0035",
+                "desc": "TUBO RET. 25,40 X 12,70 X 1,00MM",
+                "peso_metro": "0,196",
+                "medida_a": "1\"",
+                "medida_b": "1/2\"",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0028",
+                "desc": "TUBO RET. 50,80 X 12,70 X 1,10MM",
+                "peso_metro": "0,365",
+                "medida_a": "2\"",
+                "medida_b": "1/2\"",
+                "medida_e": "1,10MM"
+            },
+            {
+                "cod": "MAC-0009",
+                "desc": "TUBO RET. 50,80 X 25,40 X 1,00MM",
+                "peso_metro": "0,402",
+                "medida_a": "2\"",
+                "medida_b": "1\"",
+                "medida_e": "1,00MM"
+            },
+            {
+                "cod": "MAC-0042",
+                "desc": "TUBO RET. 76,20 X 38,10 X 1,40MM",
+                "peso_metro": "0,846",
+                "medida_a": "3\"",
+                "medida_b": "1.1/2\"",
+                "medida_e": "1,40MM"
+            },
+            {
+                "cod": "MAC-0036",
+                "desc": "TUBO RET. 101,60 X 50,80 X 1,30MM",
+                "peso_metro": "1,055",
+                "medida_a": "4\"",
+                "medida_b": "2\"",
+                "medida_e": "1,30MM"
+            },
+            {
+                "cod": "MAC-0034",
+                "desc": "TUBO RET. 101,60 X 50,80 X 2,00MM",
+                "peso_metro": "1,608",
+                "medida_a": "4\"",
+                "medida_b": "2\"",
+                "medida_e": "2,00MM"
+            },
+            {
+                "cod": "MAC-0010",
+                "desc": "TUBO RET. 101,60 X 50,80 X 3,17MM",
+                "peso_metro": "1,451",
+                "medida_a": "4\"",
+                "medida_b": "2\"",
+                "medida_e":"1/8\""
+            }
+        ],
+        "tubo_retangular": [
+            {
+                "cod": "MAC-0007",
+                "desc": "TUBO QUADRADO 25,40 X 1,OO MM",
+                "peso_metro": "0,263",
+                "medida_a": "1\"",
+                "medida_b": "---",
+                "medida_e":"1,00MM"
+            } 
+        ]
+    }
+}
