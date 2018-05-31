@@ -5,9 +5,6 @@
 @import "styles_partials/config/font-awesome";
 @import "styles_partials/config/colors";
 @import "styles_partials/config/fonts";
-//@import "styles_partials/config/helper";
-//@import "styles_partials/config/normalize";
-
 
 // COMPONENTS
 // ====================================================================
@@ -17,31 +14,8 @@
 @import "styles_partials/components/footer";
 @import "styles_partials/components/localizacao";
 @import "styles_partials/components/contato";
-//@import "styles_partials/desktop/components/banners";
-//@import "styles_partials/desktop/components/history";
-//@import "styles_partials/desktop/components/aside";
-//@import "styles_partials/desktop/components/modals";
-//@import "styles_partials/desktop/components/skuQtd";
 
 // PAGES
 // ====================================================================
 @import "styles_partials/pages/home";
-//@import "styles_partials/desktop/pages/catalogo";
-//@import "styles_partials/desktop/pages/comparar";
-//@import "styles_partials/desktop/pages/produto";
-//@import "styles_partials/desktop/pages/quickview";
-//@import "styles_partials/desktop/pages/quickbasket";
-//@import "styles_partials/desktop/pages/detalheLook";
-//@import "styles_partials/desktop/pages/basket";
-//@import "styles_partials/desktop/pages/presente";
-//@import "styles_partials/desktop/pages/garantia";
-//@import "styles_partials/desktop/pages/login";
-//@import "styles_partials/desktop/pages/minhaConta";
-//@import "styles_partials/desktop/pages/meuscartoes";
-//@import "styles_partials/desktop/pages/wishlist";
-//@import "styles_partials/desktop/pages/lists";
-//@import "styles_partials/desktop/pages/cadastro";
-//@import "styles_partials/desktop/pages/institucional";
-//@import "styles_partials/desktop/pages/sitemap";
-//@import "styles_partials/desktop/pages/afiliados";
-//@import "styles_partials/desktop/pages/contato";
+@import "styles_partials/pages/page";

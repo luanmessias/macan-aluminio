@@ -1,0 +1,33 @@
+%internal-titles{
+    .internal-titles{
+        position: relative;
+        @include bgimg(bg_middle, jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 30px 0px;
+        h1{
+            @include fonte($font-two, normal, 40px, $color-white);
+        }
+        @media (min-width: $res-md) {
+            
+        }
+
+        @media (max-width: $res-sm) { 
+           
+        }
+    }
+}
+
+%filter-bar{
+    .filtro-perfis{
+        background: $color-gray-dark;
+    }
+}
+
+
+// PAGE - CALLS
+// ====================================================================
+body{
+    @extend %internal-titles;
+    @extend %filter-bar;
+}
