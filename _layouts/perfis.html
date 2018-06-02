@@ -2,18 +2,35 @@
 layout: default
 ---
 
-<div class="container-fluid internal-titles">
-    <div class="container">
-        <h1>Perfis de Aluminio</h1>
-    </div>
-</div>
+<div class="container-fluid p-0 app">
 
-<div class="container-fluid filtro-perfis">
-    <div class="container">
-        <h1>Perfis de Aluminio</h1>
+    <div class="container-fluid internal-titles">
+        <div class="container">
+            <h1>Perfis de Aluminio</h1>
+        </div>
     </div>
-</div>
 
-<div class="container-fluid perfis-result">
-    
+    <div class="container-fluid filtro-perfis">
+        <div class="container">
+            <select name="categoria" id="categoria">
+                <option value="">Selecione uma categoria</option>
+            </select>
+            <input type="text" ng-model="favMeat" placeholder="enter you fav meat" />
+        </div>
+    </div>
+
+    <div class="container-fluid perfis-result">
+        <div class="container">
+
+            <div class="card mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text" ng-bind="favMeat"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>

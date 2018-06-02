@@ -1,6 +1,3 @@
-/* -------------------------------------------------------*/
-/* -----------------*>>> MIXINS <<<-----------------------*/
-/* -------------------------------------------------------*/
 @mixin border-radius($radius: 5px){
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -55,10 +52,10 @@
     $bt-bg-active: $bt-bg-main-active)
 {
     @include box-sizing();
-    @include radiusbl($bt-radius-bl);
-    @include radiusbr($bt-radius-br);
-    @include radiustl($bt-radius-tl);
-    @include radiustr($bt-radius-tr);
+    @include radiusbl(5px);
+    @include radiusbr(5px);
+    @include radiustl(5px);
+    @include radiustr(5px);
     background-color: $bt-bg;
     background: $bt-bg;
     border: 0px;
@@ -78,7 +75,6 @@
     justify-content: center;
     flex-direction: column;
     padding: 0px;
-    letter-spacing: 1px;
     &:hover {
         background-color: $bt-bg-hover;
         background: $bt-bg-hover;
@@ -151,12 +147,17 @@
     -ms-box-sizing: $type;
     box-sizing: $type;
 }
-@mixin bgimg($img-name, $img-type){
-    background: url("#{$img-url}/" + $img-name + "." + $img-type);
+@mixin bgimg($img){
+    background: url("#{$img-url}/" + $img);
 }
-@mixin bgimage($img-name, $img-type){
-    background-image: url("#{$img-url}/" + $img-name + "." + $img-type);
+@mixin bgimage($img){
+    background-image: url("#{$img-url}/" + $img);
 }
+
+@mixin bgimgpay($img){
+    background: url("#{$img-url}/payicons/" + $img);
+}
+
 @mixin fonte($font-family: $font-def, $font-weight: "normal", $font-size: 12px, $font-color: #000){
     font-family: $font-family;
     font-weight: $font-weight;
@@ -278,15 +279,21 @@
   -o-filter: $filter-type+unquote('(#{$filter-amount})');
   filter: $filter-type+unquote('(#{$filter-amount})');
 }
-@mixin select-arrow($img-name, $arrow-percent){
-    @include bgimg($img-name, png);
+@mixin select-arrow($img, $img-w, $arrow-percent){
+    @include bgimg($img);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background-repeat: no-repeat;
     background-position: $arrow-percent center;
     background-color: #FFF;
+    background-size: $img-w;
+    padding-right: $img-w + 10;
+    &::-ms-expand{
+        display: none;
+    }
 }
+
 @mixin clearfix {
     &:after,
     &:before{
@@ -302,13 +309,56 @@
 }
 
 @mixin set-icon($content,$size,$weigth,$color){
-    font-family: $font-icons;
+    font-family: "Font Awesome 5 Free";
     background: none;
     content: $content;
     font-size: $size;
     font-weight: $weigth;
     color: $color;
     text-indent: 0;
+}
+
+@mixin transition($property: all, $duration: .3s, $ease: linear){
+	-webkit-transition: $property $duration $ease;
+	-moz-transition: $property $duration $ease;
+	-o-transition: $property $duration $ease;
+	transition: $property $duration $ease;
+}
+
+
+@mixin display-grid(){
+    display: grid;
+    -ms-display: grid;
+}
+
+@mixin grid-gap($gridGap){
+    grid-gap: $gridGap;
+}
+
+@mixin grid-row($init, $end:null){
+
+    @if($end) {
+        grid-row:  #{$init + " / " + $end};
+        -ms-grid-row:  #{$init + " - " + $end};
+    }
+
+    @else {
+        grid-row: $init;
+        -ms-grid-row: $init;
+    }
+    
+}
+
+@mixin grid-column($init, $end:null){
+    @if($end) {
+        grid-column: #{$init + " / " + $end};
+        -ms-grid-column:  #{$init + " - " + $end};
+    }
+
+    @else {
+        grid-column: $init;
+        -ms-grid-column: $init;
+    }
 }
 
 @mixin blur($blur){

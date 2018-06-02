@@ -7,7 +7,7 @@
     background-color: rgba(33, 58, 80, 0.8);
     &:after{
         content: "";
-        @include bgimage(banner-home-4, jpg);
+        @include bgimage('banner-home-4.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.5;

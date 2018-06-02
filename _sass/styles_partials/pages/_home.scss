@@ -185,7 +185,7 @@
 %home-destaques{
     .destaques{
         @include box-sizing();
-        @include bgimg(bg_middle, jpg);
+        @include bgimg("bg_middle.jpg");
         background-attachment: fixed;
         width: 100%;
         padding: 20px;
@@ -229,7 +229,7 @@
 %home-social{
     .social{
         @include box-sizing();
-        @include bgimg(bg_bottom, jpg);
+        @include bgimg("bg_bottom.jpg");
         background-attachment: fixed;
         width: 100%;
         padding: 50px 10px;
