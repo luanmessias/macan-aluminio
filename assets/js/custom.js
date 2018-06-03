@@ -121,3 +121,40 @@ simpleDash.filter('searchFor', function () {
         return result;
     };
 });
+
+
+
+var app = angular.module('macanApp', ['ngAnimate']);
+app.config([
+  '$interpolateProvider', function($interpolateProvider) {
+    return $interpolateProvider.startSymbol('{(').endSymbol(')}');
+  }
+]);
+
+
+app.controller("macanController", function ($scope, $http) {
+    $http.get('assets/data/catalog.json').then(function (data, status) {
+        
+        $scope.perfis = data.data.tools;
+
+
+        console.log($scope.perfis);
+        /*
+            Função responável por gerar mais posts ao clicar em Load More
+        */
+        $scope.quantity = 5;
+        $scope.loadMore = function () {
+            var postsSize = data.data.links.length;
+            var increamented = $scope.quantity + 3;
+            var btLoadMore = document.querySelector('.loadMore');
+
+            if (increamented > postsSize) {
+                $scope.quantity = postsSize;
+                btLoadMore.setAttribute("class", "loadMore inactive");
+            } else {
+                $scope.quantity = increamented;
+            }
+        };
+
+    });
+});
