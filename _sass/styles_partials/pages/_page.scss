@@ -65,8 +65,7 @@
             @include border-radius(0);
             padding: 0px;
             .card-img {
-                @include bgimg("MAC-0068.jpg");
-                background-size: 95%;
+                background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
                 width: 100%;
