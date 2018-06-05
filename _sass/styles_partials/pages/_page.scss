@@ -137,20 +137,20 @@
             width: 22px;
             margin-right: 10px;
             &:before {
-                @include set-icon($fa-var-spinner, 25px, bold, $color-orange);
+                @include set-icon($fa-var-spinner, 25px, bold, $color-gray-dark);
                 margin-right: 10px;
                 display: inline-block;
             }
         }
         span {
-            @include fonte($font-two, 400, 18px, $color-orange);
+            @include fonte($font-two, 400, 18px, $color-gray-dark);
         }
         &.inactive {
             cursor: default;
             background-color: $color-gray-light;
             div {
                 &:before {
-                    @include set-icon($fa-var-ban, 25px, bold, $color-orange);
+                    @include set-icon($fa-var-ban, 25px, bold, $color-gray-dark);
                 }
             }
             span {
@@ -166,7 +166,7 @@
             background-color: $color-gray-light;
             div {
                 &:before {
-                    @include set-icon($fa-var-meh, 25px, 900, $color-orange);
+                    @include set-icon($fa-var-meh, 25px, 900, $color-gray-dark);
                 }
             }
             span {
