@@ -18,10 +18,31 @@
         @include box-sizing();
         background: $color-gray-dark;
         padding: 10px;
-        select {
+        select{
+            @include select-arrow("select-arrow.png", 10px, 97%);
+        }
+        select,
+        input {
             @include fonte($font-one, 400, 12px, #FFF);
-            background: transparent;
-            border: 1px solid #FFF;
+            @include transition;
+            @include opacity(.5);
+            background-color: transparent;
+            border: 1px solid rgb(255, 255, 255);
+            &:hover,
+            &:active,
+            &:focus{
+                @include opacity(1);
+            }
+        }
+        .searchbar{
+            display: inline-block;
+            position: relative;
+            &:after{
+                @include set-icon($fa-var-search, 20px, 600, #FFF);
+                position: absolute;
+                right: 10px;
+                top: 5px;
+            }
         }
     }
 }
@@ -61,6 +82,101 @@
             .card-body {
                 padding: 0px;
             }
+            .card-name{
+                @include box-sizing;
+                @include fonte($font-one, bold, 14px, #FFF);
+                background: rgb(63, 63, 63);
+                text-transform: uppercase;
+                padding: 10px;
+            }
+            .card-info{
+               @include flexbox(flex, row, wrap, space-around, inherit, flex-start);
+            }
+            .card-code-block,
+            .card-info-block{
+                @include box-sizing;
+            }
+            .card-code-block{
+                width: 100%;
+            }
+            .card-info-block{
+                width: 50%;
+            }
+            .info-title,
+            .info-desc{
+                @include box-sizing;
+                padding: 5px;
+            }
+            .info-title{
+                background: rgb(187, 187, 187);
+                @include fonte($font-one, bold, 14px, rgb(51, 51, 51));
+            }
+            .info-desc{
+                @include fonte($font-one, 400, 14px, rgb(51, 51, 51));
+            }
+        }
+    }
+}
+
+%page-loadmore {
+    .loadMore {
+        @include box-sizing();
+        @include flexbox(flex, row, nowrap, center, center, center);
+        background-color: #CCC;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 20px;
+        &:not(.inactive):hover {
+            div {
+                @extend %anim-rotateIn;
+                cursor: pointer;
+            }
+        }
+        div {
+            width: 22px;
+            margin-right: 10px;
+            &:before {
+                @include set-icon($fa-var-spinner, 25px, bold, $color-orange);
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+        span {
+            @include fonte($font-two, 400, 18px, $color-orange);
+        }
+        &.inactive {
+            cursor: default;
+            background-color: $color-gray-light;
+            div {
+                &:before {
+                    @include set-icon($fa-var-ban, 25px, bold, $color-orange);
+                }
+            }
+            span {
+                font-size: 0px;
+                &:before {
+                    content: "Não á mais conteúdo";
+                    font-size: 18px;
+                }
+            }
+        }
+        &.zeroLenght {
+            cursor: default;
+            background-color: $color-gray-light;
+            div {
+                &:before {
+                    @include set-icon($fa-var-meh, 25px, 900, $color-orange);
+                }
+            }
+            span {
+                font-size: 0px;
+                &:before {
+                    content: "Oops! Nenhum resultado encontrado.";
+                    font-size: 18px;
+                }
+            }
         }
     }
 }
@@ -72,4 +188,5 @@ body {
     @extend %filter-bar;
     @extend %perfis;
     @extend %perfil-card;
+    @extend %page-loadmore;
 }

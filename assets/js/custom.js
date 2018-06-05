@@ -22,12 +22,18 @@ $("#carouselExampleIndicators").on('slide.bs.carousel', function () {
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
-        center: { lat: -24.315628907175455, lng: -47.008356049999975 }
+        center: {
+            lat: -24.315628907175455,
+            lng: -47.008356049999975
+        }
     });
 
     var image = 'assets/img/mark_m.png';
     var beachMarker = new google.maps.Marker({
-        position: { lat: -24.315628907175455, lng: -47.008326049999975 },
+        position: {
+            lat: -24.315628907175455,
+            lng: -47.008326049999975
+        },
         map: map,
         icon: image
     });
@@ -62,34 +68,37 @@ $(document).ready(function () {
 
 
 
-/*
-  ng-app padrão do projeto  
-*/
-var simpleDash = angular.module("simpleDashboard", ['ngAnimate']);
+var app = angular.module('macanApp', ['ngAnimate']);
+app.config([
+    '$interpolateProvider',
+    function ($interpolateProvider) {
+        return $interpolateProvider.startSymbol('{(').endSymbol(')}');
+    }
+]);
 
-/*
-  ng-controller padrão do projeto  
-*/
-simpleDash.controller("simpleDashboardCtrl", function ($scope, $http) {
-    $http.get('assets/data/data.json').then(function (data, status) {
-        $scope.posts = data.data.links;
 
-        /*
+app.controller("macanController", function ($scope, $http) {
+    $http.get('assets/data/catalog.json').then(function (data, status) {
+        var vm = $scope;
+        vm.categories = data.data.categories;
+        vm.tools = data.data.tools;        /*
             Função responável por gerar mais posts ao clicar em Load More
         */
-        $scope.quantity = 5;
-        $scope.loadMore = function () {
-            var postsSize = data.data.links.length;
-            var increamented = $scope.quantity + 3;
+        vm.quantity = 6;
+        vm.loadMore = function () {
+            var postsSize = vm.tools.length;
+            var increamented = vm.quantity + 3;
             var btLoadMore = document.querySelector('.loadMore');
-
-            if (increamented > postsSize) {
-                $scope.quantity = postsSize;
+            var elementCount = document.querySelectorAll('.col-card').length + 3;
+            
+            if (increamented > postsSize || elementCount != increamented) {
+                vm.quantity = postsSize;
                 btLoadMore.setAttribute("class", "loadMore inactive");
             } else {
-                $scope.quantity = increamented;
+                vm.quantity = increamented;
             }
         };
+
 
     });
 });
@@ -98,21 +107,23 @@ simpleDash.controller("simpleDashboardCtrl", function ($scope, $http) {
 /*
     Função responsável pela busca de posts
 */
-simpleDash.filter('searchFor', function () {
+app.filter('searchFor', function () {
     return function (arr, searchString) {
         if (!searchString) {
             return arr;
         }
         var result = [];
         var btLoadMore = document.querySelector('.loadMore');
+
         searchString = searchString.toLowerCase();
         angular.forEach(arr, function (item) {
-            if (item.meta.author.toLowerCase().indexOf(searchString) !== -1 || item.meta.title.toLowerCase().indexOf(searchString) !== -1) {
+            if (item.desc.toLowerCase().indexOf(searchString) !== -1 ||
+                item.cod.toLowerCase().indexOf(searchString) !== -1) {
                 result.push(item);
             }
-            if(result.length < 5 && result.length > 0){
+            if (result.length < 6 && result.length > 0) {
                 btLoadMore.setAttribute("class", "loadMore inactive");
-            } else if(result.length == 0) {
+            } else if (result.length == 0) {
                 btLoadMore.setAttribute("class", "loadMore zeroLenght");
             } else {
                 btLoadMore.setAttribute("class", "loadMore");
@@ -120,41 +131,4 @@ simpleDash.filter('searchFor', function () {
         });
         return result;
     };
-});
-
-
-
-var app = angular.module('macanApp', ['ngAnimate']);
-app.config([
-  '$interpolateProvider', function($interpolateProvider) {
-    return $interpolateProvider.startSymbol('{(').endSymbol(')}');
-  }
-]);
-
-
-app.controller("macanController", function ($scope, $http) {
-    $http.get('assets/data/catalog.json').then(function (data, status) {
-        
-        $scope.perfis = data.data.tools;
-
-
-        console.log($scope.perfis);
-        /*
-            Função responável por gerar mais posts ao clicar em Load More
-        */
-        $scope.quantity = 5;
-        $scope.loadMore = function () {
-            var postsSize = data.data.links.length;
-            var increamented = $scope.quantity + 3;
-            var btLoadMore = document.querySelector('.loadMore');
-
-            if (increamented > postsSize) {
-                $scope.quantity = postsSize;
-                btLoadMore.setAttribute("class", "loadMore inactive");
-            } else {
-                $scope.quantity = increamented;
-            }
-        };
-
-    });
 });

@@ -48,28 +48,7 @@
                     text-align: center;
                 }
             }
-            &.info-adress {
-                &:before {
-                    @include set-icon($fa-var-map-marker, 50px, 300, $color-white);
-                }
-            }
-            &.info-mail {
-                font-size: 16px;
-                &:before {
-                    @include set-icon($fa-var-envelope, 50px, 300, $color-white);
-                }
-            }
-            &.info-phone {
-                font-size: 18px;
-                &:before {
-                    @include set-icon($fa-var-phone, 50px, 300, $color-white);
-                }
-            }
-            &.info-clock {
-                &:before {
-                    @include set-icon($fa-var-clock-o, 50px, 300, $color-white);
-                }
-            }
+            
         }
     }
 }

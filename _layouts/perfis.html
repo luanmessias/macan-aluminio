@@ -12,41 +12,62 @@ layout: default
 
     <div class="container-fluid filtro-perfis">
         <div class="container">
-            <select name="categoria" id="categoria">
-                <option value="">Selecione uma categoria</option>
-
-            </select>
-            <select class="sortBy" ng-model="propName">
-                <option value="linha_geral">Popularity</option>
-                <option value="linha_geral">Date</option>
-                <option value="linha_geral">Comments</option>
+            <select name="categorie" id="categorie" ng-model="categorie">
+                <option value="">Ordenar por categoria</option>
+                <option value="{(categorie.id)}" ng-repeat="categorie in categories">{(categorie.desc)}</option>
             </select>
 
-            <select class="orderBy" ng-model="reverse">
-                <option value="true">Lower → Higher</option>
-                <option value="">Higher → Lower</option>
-            </select>
-
-            <input type="text" ng-model="favMeat" placeholder="enter you fav meat" />
+            <span class="searchbar">
+                    <input type="text" class="search" ng-model="searchString" placeholder="Buscar perfil" />
+            </span>
         </div>
     </div>
 
     <div class="container-fluid perfis-result">
         <div class="d-flex flex-row justify-content-around my-flex-container flex-wrap container cards">
-
-            <div class="col-card col-xs-12 col-sm-6 col-md-3 col-xl-4" ng-repeat="perfil in perfis">
+            <div class="col-card col-xs-12 col-sm-6 col-md-3 col-xl-4 repeated-item" ng-repeat="tool in tools | filter:{cat:categorie} |  searchFor:searchString | limitTo: quantity">
                 <div class="card">
-                    <div class="card-header">{(perfil.cod)}</div>
+                    <div class="card-header">{(tool.cod)}</div>
                     <div class="card-body">
-                        <div class="card-img"></div>
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">
-                            
-                        </p>
+                        <div class="card-img">
+
+                        </div>
+
+                        <div class="card-code">
+                            <div class="card-code-block">
+                                <div class="info-title">Código</div>
+                                <div class="info-desc">{(tool.desc)}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-info">
+                            <div class="card-info-block">
+                                <div class="info-title">peso / Metro</div>
+                                <div class="info-desc">{(tool.peso_metro)}</div>
+                            </div>
+                        
+                            <div class="card-info-block">
+                                <div class="info-title">Medida A</div>
+                                <div class="info-desc">{(tool.medida_a)}</div>
+                            </div>
+                        
+                            <div class="card-info-block">
+                                <div class="info-title">Medida B</div>
+                                <div class="info-desc">{(tool.medida_b)}</div>
+                            </div>
+                        
+                            <div class="card-info-block">
+                                <div class="info-title">Medida E</div>
+                                <div class="info-desc">{(tool.medida_e)}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div class="loadMore" ng-click="loadMore()">
+                <div></div>
+                <span>Carregar mais</span>
+            </div>
         </div>
     </div>
 
