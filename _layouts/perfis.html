@@ -20,12 +20,14 @@ layout: default
             <span class="searchbar">
                     <input type="text" class="search" ng-model="searchString" placeholder="Buscar perfil" />
             </span>
+
+            <a type="button" name="" id="" class="btn btn-primary btn-pdf" href="/assets/download/catalogo.pdf" download> <i class="fas fa-file-pdf"></i> Baixar Catálogo</a>
         </div>
     </div>
 
     <div class="container-fluid perfis-result">
         <div class="d-flex flex-row justify-content-around my-flex-container flex-wrap container cards">
-            <div class="col-card col-xs-12 col-sm-6 col-md-3 col-xl-4 repeated-item" ng-repeat="tool in tools | filter:{cat:categorie} |  searchFor:searchString | limitTo: quantity">
+            <div class="col-card col-xs-12 col-sm-6 col-md-4 col-xl-4 repeated-item" ng-repeat="tool in tools | filter:{cat:categorie} |  searchFor:searchString | limitTo: quantity">
                 <div class="card">
                     <div class="card-header">{(tool.cod)} <button type="button" class="btn card-zoom" ng-click="openDlg(tool)"><i class="fas fa-search"></i></i></button></div>
                     <div class="card-body">
@@ -116,7 +118,7 @@ layout: default
             
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
             
           </div>

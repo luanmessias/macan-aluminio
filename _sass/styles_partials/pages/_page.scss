@@ -15,6 +15,9 @@
 
 %filter-bar {
     .filtro-perfis {
+        *{
+            @include transition();
+        }
         @include box-sizing();
         background: $color-gray-dark;
         padding: 10px;
@@ -44,6 +47,55 @@
                 top: 5px;
             }
         }
+        .btn-pdf {
+            @include transition();
+            @include border-radius(0);
+            @include remove-shadow;
+            float: right;
+            background-color: #1C476A;
+            color: #FFF;
+            border: 0px;
+            height: 40px;
+            cursor: pointer;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: #032D50;
+                border: 0px;
+            }
+        }
+        @media (max-width: $res-xs) {
+            .container{
+                @include flexbox(flex, column, nowrap, space-between, center, center);
+            }
+            select,
+            input,
+            .btn-pdf,
+            .searchbar{
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        } // Medium devices (tablets, 768px and up)
+        @media (min-width: $res-xs) and (max-width: $res-sm) {
+            .container{
+                @include flexbox(flex, row, nowrap, space-between, center, center);
+            }
+            input{
+                width: 100%;
+                @include box-sizing();
+            }
+            select,
+            .btn-pdf,
+            .searchbar{
+                @include box-sizing();
+                width: calc(33.333333% - 10px);
+            }
+        }
+        // Large devices (desktops, 992px and up)
+        @media (min-width: $res-md) {
+        }
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: $res-xl) {}
     }
 }
 
@@ -57,7 +109,14 @@
 }
 
 %perfil-card {
+    .cards {
+        @include transition;
+        * {
+            @include transition;
+        }
+    }
     .col-card {
+        @include transition;
         padding: 10px;
     }
     .card {
@@ -141,6 +200,29 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    .close {
+        @include remove-shadow;
+        @include remove-textshadow;
+        color: #FFF;
+        font-size: 2em;
+        cursor: pointer;
+        &:hover,
+        &:focus,
+        &:active {
+            color: #FFF;
+        }
+    }
+    .modal-header {
+        @include flexbox(flex, row, nowrap, space-between, center, center);
+        @include border-radius(0);
+        @include fonte($font-one, bold, 14px, #FFF);
+        text-transform: uppercase;
+        padding: 10px;
+        background: #1C476A;
+    }
+    .modal-footer button {
+        cursor: pointer;
     }
 }
 
