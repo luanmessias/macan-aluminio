@@ -81,7 +81,8 @@ app.controller("macanController", function ($scope, $http) {
     $http.get('assets/data/catalog.json').then(function (data, status) {
         var vm = $scope;
         vm.categories = data.data.categories;
-        vm.tools = data.data.tools;        /*
+        vm.tools = data.data.tools;
+        /*
             Função responável por gerar mais posts ao clicar em Load More
         */
         vm.quantity = 6;
@@ -90,7 +91,7 @@ app.controller("macanController", function ($scope, $http) {
             var increamented = vm.quantity + 3;
             var btLoadMore = document.querySelector('.loadMore');
             var elementCount = document.querySelectorAll('.col-card').length + 3;
-            
+
             if (increamented > postsSize || elementCount != increamented) {
                 vm.quantity = postsSize;
                 btLoadMore.setAttribute("class", "loadMore inactive");
@@ -99,9 +100,28 @@ app.controller("macanController", function ($scope, $http) {
             }
         };
 
+        vm.openDlg = function (tool) {
+            console.log(tool);
+      
+            var modal = angular.element("#myModal");
+            if (modal) {
+
+                document.querySelector('.modal-card-img').setAttribute('style', 'background-image: url("/assets/img/perfis/'+ tool.cod +'.jpg")');
+                modal.scope().tool_code = tool.cod;
+                modal.scope().tool_desc = tool.desc;
+                modal.scope().tool_peso_metro = tool.peso_metro;
+                modal.scope().tool_medida_a = tool.medida_a;
+                modal.scope().tool_medida_b = tool.medida_b;
+                modal.scope().tool_medida_e = tool.medida_e;
+
+                modal.modal("show");
+            }
+        };
+
 
     });
 });
+
 
 
 /*

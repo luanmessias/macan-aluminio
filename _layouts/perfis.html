@@ -27,7 +27,7 @@ layout: default
         <div class="d-flex flex-row justify-content-around my-flex-container flex-wrap container cards">
             <div class="col-card col-xs-12 col-sm-6 col-md-3 col-xl-4 repeated-item" ng-repeat="tool in tools | filter:{cat:categorie} |  searchFor:searchString | limitTo: quantity">
                 <div class="card">
-                    <div class="card-header">{(tool.cod)}</div>
+                    <div class="card-header">{(tool.cod)} <button type="button" class="btn card-zoom" ng-click="openDlg(tool)"><i class="fas fa-search"></i></i></button></div>
                     <div class="card-body">
                         <div class="card-img" style="background-image: url('/assets/img/perfis/{(tool.cod)}.jpg')">
                             
@@ -71,4 +71,57 @@ layout: default
         </div>
     </div>
 
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title" ng-bind="tool_code"></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body card">
+               <div class="modal-card-img"></div>
+                <div class="card-code">
+                    <div class="card-code-block">
+                        <div class="info-title">Código</div>
+                        <div class="info-desc" ng-bind="tool_desc"></div>
+                    </div>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-info-block">
+                        <div class="info-title">peso / Metro</div>
+                        <div class="info-desc" ng-bind="tool_peso_metro"></div>
+                    </div>
+
+                    <div class="card-info-block">
+                        <div class="info-title">Medida A</div>
+                        <div class="info-desc" ng-bind="tool_medida_a"></div>
+                    </div>
+
+                    <div class="card-info-block">
+                        <div class="info-title">Medida B</div>
+                        <div class="info-desc" ng-bind="tool_medida_b"></div>
+                    </div>
+
+                    <div class="card-info-block">
+                        <div class="info-title">Medida E</div>
+                        <div class="info-desc" ng-bind="tool_medida_e"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
 </div>
+
