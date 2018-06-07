@@ -7,18 +7,18 @@ banners:
       description: "Atividades em locais de alto risco e complexidade"
 
 cards:
-    - number: "01"
-      title: "Padrão de Entrada"
-      desc: "Medições individual e agrupada, elaboração/apresentação/execução de projetos elétricos junto a conseccionária com fornecimento de material e mão de obra."
-    - number: "02"
-      title: "Projetos Elétricos"
-      desc: "Elaboração de Projetos de Redes e Linhas de Distribuição em média e baixa tensão, Iluminação Pública e Ornamental (pontes, viadutos, praças, passarelas, ciclovias... ). Projetos Especiais de SPDA e AVCB."
-    - number: "03"
-      title: "Centro de Transformação"
-      desc: "Viabilidade técnica, Laudos, Projeto Elétrico, Acompanhamento junto as concessionárias, fornecimento de materiais homologados conforme normas específicas e ABNT e execução. Cabines Primárias, Transformadores a Seco, Manutenção Geral e Emergencial."
-    - number: "04"
-      title: "Condomínios, Loteamentos, Pessoa física/jurídica"
-      desc: "Elaboração, apresentação e execução de projetos de extensão, construção de redes de baixa e média tensão com instalação de transformadores e sistemas de iluminação em redes de cobre/alumínio de tipo convencional ou multiplexadas e compactas."
+    - icon: "fas fa-cogs"
+      title: "INFRAESTRUTURA"
+      desc: "A Macan apresenta um parque fabril de 48 mil metros quadrados, em sua divisão de alumínio, atuando desde o beneficiamento de materiais primários ao processamento de retalhos de alumínio para a fabricação de seus produtos, já sua divisão de plástico, fornece acessórios para os departamentos de banheiro e jardim."
+    - icon: "fas fa-recycle"
+      title: "SUSTENTABILIDADE"
+      desc: "O meio ambiente é um forte aliado da Macan, conta com um grande controle de seus resíduos industriais, investindo em sua destinação adequada, redução e eliminação. Por isso também foram criados programas de monitoramento ambiental para que sejam feitos os devidos acompanhamentos de quaisquer resíduos de responsabilidade da Empresa."
+    - icon: "fas fa-industry"
+      title: "PRODUTOS"
+      desc: "Com referência no desenvolvimento de seus produtos, a Macan possui uma das únicas com capacidade para fabricar desde suas ligas de alumínio até os produtos acabados como janelas, portas, réguas e escadas."
+    - icon: "fas fa-comment"
+      title: "ATENDIMENTO"
+      desc: "Possuímos uma equipe altamente qualificada para lhe proporcionar a melhor experiência possível."
 
 
 destaques:
@@ -78,18 +78,18 @@ produtos:
 
 
 <div class="servicos container">
-    <h1>Nossos Servicos</h1>
-    <span>Understanding steel processing Students of steel processing may be interested in our brief descriptions of each of our
-        main steel processing machines, which you can find by clicking below.</span>
-    <div class="card-group d-xl-flex justify-content-between align-items-center">
+    <h1>Seja bem vindo!</h1>
+    <span>A Macan Alumínio atende os mais variados tipos de demanda, com muita agilidade, precisão e competência. Visamos atender todas as necessidades e exigências dos clientes que procuram uma Indústria de Alumínio em São Paulo.</span>
+    <br>
+    <span>A Macan Alumínio mantém em seu amplo estoque, uma completa linha de perfis para linha moveleira, para construção civil e instalação de vidro temperado.</span>
+    <div class="card-group d-xl-flex justify-content-between align-items-top">
         {% for card in layout.cards %}
         <div class="card">
-            <div class="number">{{card.number}}</div>
+            <div class="number"><i class="{{card.icon}}"></i></div>
             <div class="card-body">
-                <h5 class="card-title card-number">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
-                    is a little bit longer.</p>
-                <p class="card-text">
+                <h5 class="card-title card-number">{{card.title}}</h5>
+                <p class="card-text">{{card.desc}}</p>
+                <p class="card-text d-none">
                     <a name="" id="" class="btn btn-primary btn-alt-primary" href="#" role="button">MAIS</a>
                 </p>
             </div>

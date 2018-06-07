@@ -153,7 +153,7 @@
 %home-services{
     .servicos{
         padding: 10px;
-
+        
         .card{
             text-align: center;
             padding: 25px 0px;
@@ -161,15 +161,21 @@
         }
 
         .number{
+            @include transition;
             @include border-radius(100%);
-            @include fonte($font-two, bold, 60px, $color-white);
+            @include fonte($font-two, bold, 60px, #6A6A6A);
             @include flexbox(flex, row, nowrap, center, center, space-between);
             align-self: center;
             text-align: center;
-            background-color: #6A6A6A;
-            width: 150px;
-            height: 150px;
+            background-color: #FFF;
+            width: 110px;
+            height: 110px;
             margin: 0px;
+            margin-bottom: 20px;
+            &:hover{
+                background-color: #6A6A6A;
+                color: #FFF;
+            }
         }
 
         .card-title{
@@ -178,6 +184,9 @@
 
         .card-text{
             @include fonte($font-one, 400, 12px, $color-gray-dark);
+            text-align: justify;
+            width: 80%;
+            margin: 0px auto;
         }
 
     }
