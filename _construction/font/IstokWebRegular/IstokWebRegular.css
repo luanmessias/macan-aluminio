@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'IstokWebRegular';
+    src: url('fonts/IstokWebRegular.eot');
+    src: url('fonts/IstokWebRegular.eot') format('embedded-opentype'),
+         url('fonts/IstokWebRegular.woff2') format('woff2'),
+         url('fonts/IstokWebRegular.woff') format('woff'),
+         url('fonts/IstokWebRegular.ttf') format('truetype'),
+         url('fonts/IstokWebRegular.svg#IstokWebRegular') format('svg');
+}

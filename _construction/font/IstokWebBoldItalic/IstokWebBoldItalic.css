@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'IstokWebBoldItalic';
+    src: url('fonts/IstokWebBoldItalic.eot');
+    src: url('fonts/IstokWebBoldItalic.eot') format('embedded-opentype'),
+         url('fonts/IstokWebBoldItalic.woff2') format('woff2'),
+         url('fonts/IstokWebBoldItalic.woff') format('woff'),
+         url('fonts/IstokWebBoldItalic.ttf') format('truetype'),
+         url('fonts/IstokWebBoldItalic.svg#IstokWebBoldItalic') format('svg');
+}

@@ -150,6 +150,23 @@
     }
 }
 
+%header-info{
+    .info{
+        padding: 10px;
+        background: #4b4d50;
+        li{
+            list-style: none;
+            @include flexbox(flex, row, nowrap, flex-start, center, center);
+            @include fonte($font-one, normal, 14px, $color-white);
+            margin: 5px 0px;
+            i{
+                margin-right: 5px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
 // HEADER - CALLS
 // ====================================================================
 #me-header {
@@ -158,4 +175,5 @@
     @extend %header-nav;
     @extend %header-spinner;
     @extend %header-search;
+    @extend %header-info;
 }

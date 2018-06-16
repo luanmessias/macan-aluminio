@@ -1,0 +1,125 @@
+@font-face {
+	font-family: 'IstokWebRegular';
+	src: url('../font/IstokWebRegular/fonts/IstokWebRegular.eot');
+	src: url('../font/IstokWebRegular/fonts/IstokWebRegular.eot') format('embedded-opentype'),
+	url('../font/IstokWebRegular/fonts/IstokWebRegular.woff2') format('woff2'),
+	url('../font/IstokWebRegular/fonts/IstokWebRegular.woff') format('woff'),
+	url('../font/IstokWebRegular/fonts/IstokWebRegular.ttf') format('truetype'),
+	url('../font/IstokWebRegular/fonts/IstokWebRegular.svg#IstokWebRegular') format('svg');
+}
+@font-face {
+	font-family: 'IstokWebItalic';
+	src: url('../font/IstokWebItalic/fonts/IstokWebItalic.eot');
+	src: url('../font/IstokWebItalic/fonts/IstokWebItalic.eot') format('embedded-opentype'),
+	url('../font/IstokWebItalic/fonts/IstokWebItalic.woff2') format('woff2'),
+	url('../font/IstokWebItalic/fonts/IstokWebItalic.woff') format('woff'),
+	url('../font/IstokWebItalic/fonts/IstokWebItalic.ttf') format('truetype'),
+	url('../font/IstokWebItalic/fonts/IstokWebItalic.svg#IstokWebItalic') format('svg');
+}
+@font-face {
+	font-family: 'IstokWebBoldItalic';
+	src: url('../font/IstokWebBoldItalic/fonts/IstokWebBoldItalic.eot');
+	src: url('../font/IstokWebBoldItalic/fonts/IstokWebBoldItalic.eot') format('embedded-opentype'),
+	url('../font/IstokWebBoldItalic/fonts/IstokWebBoldItalic.woff2') format('woff2'),
+	url('../font/IstokWebBoldItalic/fonts/IstokWebBoldItalic.woff') format('woff'),
+	url('../font/IstokWebBoldItalic/fonts/IstokWebBoldItalic.ttf') format('truetype'),
+	url('../font/IstokWebBoldItalic/fonts/IstokWebBoldItalic.svg#IstokWebBoldItalic') format('svg');
+}
+@font-face {
+	font-family: 'IstokWebBold';
+	src: url('../font/IstokWebBold/fonts/IstokWebBold.eot');
+	src: url('../font/IstokWebBold/fonts/IstokWebBold.eot') format('embedded-opentype'),
+	url('../font/IstokWebBold/fonts/IstokWebBold.woff2') format('woff2'),
+	url('../font/IstokWebBold/fonts/IstokWebBold.woff') format('woff'),
+	url('../font/IstokWebBold/fonts/IstokWebBold.ttf') format('truetype'),
+	url('../font/IstokWebBold/fonts/IstokWebBold.svg#IstokWebBold') format('svg');
+}
+
+/*************************************/
+/** GLOBAL **/
+/*************************************/
+
+body{
+	font-family: 'IstokWebRegular';
+	background-image: url('../img/macan1.jpg');
+	background-size: 100%;
+}
+.nopd{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.nopdl{
+	padding-left: 0px;
+}
+.nopdr{
+	padding-right: 0px;
+}
+
+/*************************************/
+/** TOPO **/
+/*************************************/
+.topo{
+	background-color: #333333;
+	padding-top: 30px;
+}
+.navbar-custom{
+	margin-bottom: 0px;
+	position: relative;
+	top: 20px;
+}
+.navbar-custom a{
+	color: #FFF;
+	z-index: 99999 !important;
+}
+.navbar-nav > li > a{
+	line-height: 5px;
+}
+
+.navbar-custom li.active{
+	background-color: #1C476A;
+	z-index: 99999 !important;
+}
+.nav > li > a:hover, .nav > li > a:focus{
+	background-color: #1C476A;
+	z-index: 99999 !important;
+}
+#mobile-header {
+    display: none;
+}
+@media only screen and (max-width: 767px){
+    #mobile-header {
+        display: block;
+    }
+}
+.carousel-caption-custom{
+	background-image: url('../img/tileBg.png');
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+}
+.txtBanner{
+	text-align: left;
+}
+.carousel-indicators-custom{
+	bottom: 140px;
+}
+.carousel-indicators-custom li{
+	width: 18px;
+	height: 18px;
+	background-color: #FFF;
+}
+.carousel-indicators-custom .active{
+	width: 18px;
+	height: 18px;
+	background-color: #244868;
+	border-color: #244868;
+}
+.construct{
+	padding-top: 100px;
+}
+.construct .jumbotron{
+	background: url('../img/tileBg.png');
+	padding-top: 10px;
+	color: #FFF;
+}

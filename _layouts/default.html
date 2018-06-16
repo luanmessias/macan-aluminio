@@ -1,16 +1,7 @@
 ---
 menu:
-  - pageName: "HOME"
-    pageLink: "index"
-  - pageName: "EMPRESA"
-    pageLink: "empresa"
-  - pageName: "PERFIS"
-    pageLink: "perfis"
-  - pageName: "SERVIÇOS"
-    pageLink: ""
   - pageName: "CONTATO"
-    pageLink: ""
-
+    pageLink: "javascript:goTo(contato);"
 ---
 
 
@@ -28,6 +19,8 @@ menu:
         {{ content }}
       </div>
     </main>
+
+    {% include contact.html %}
 
     {% include footer.html %}
 
